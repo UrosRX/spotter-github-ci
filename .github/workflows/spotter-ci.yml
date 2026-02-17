@@ -18,6 +18,23 @@ jobs:
           #exclude_metadata: true
           #display_level: error
           #no_docs_url: true
+          ansible_version: 2.9
+          #profile: full
+          #skip_checks: E001,E903[fqcn=sensu.sensu_go.user]
+          #enforce_checks: E1300,E1301
+          #debug: true
+
+      - name: Scan Ansible content with different inputs
+        uses: xlab-steampunk/spotter-action@master
+        with:
+          endpoint: https://api.spotter.steampunk.si/api
+          api_token: ${{ secrets.SPOTTER_API_TOKEN }}
+          #config: config.yaml
+          #paths: playbook.yaml
+          #exclude_values: true
+          #exclude_metadata: true
+          #display_level: error
+          #no_docs_url: true
           ansible_version: 2.16
           #profile: full
           #skip_checks: E001,E903[fqcn=sensu.sensu_go.user]
