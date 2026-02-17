@@ -1,0 +1,8 @@
+#spotter: Install and configure apache2 and php7.4
+- name: Install apache2 and php7.4
+  ansible.builtin.apt:
+    name:
+      - apache2
+      - php7.4
+    state: present
+    update_cache: yes
