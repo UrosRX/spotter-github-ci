@@ -4,5 +4,5 @@
     package:
       - apache2
       - php7.4
-    state: present
+    state: none
     update_cache: yes
